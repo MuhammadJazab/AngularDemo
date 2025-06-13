@@ -1,0 +1,723 @@
+<div class="flex justify-center px-4 sm:px-6 md:px-8">
+  <div
+    class="header-nav text-center my-3 rounded shadow w-full max-w-7xl bg-white"
+  >
+    <nav class="flex flex-wrap justify-center gap-4 py-6">
+      <!-- Button 1 -->
+      <button
+        aria-label="Potilaan tarkastelu"
+        class="flex flex-col items-center gap-1 text-xs text-[#495057] hover:text-[#212529] focus:outline-none"
+        type="button"
+      >
+        <img
+          alt="Potilaan tarkastelu"
+          class="w-10 h-10 rounded"
+          src="../../../assets/icons/patient-review.png"
+        />
+        Potilaan tarkastelu
+      </button>
+
+      <!-- Button 2 with notification -->
+      <button
+        aria-label="Potilaan viestit"
+        class="relative flex flex-col items-center gap-1 text-xs text-[#212529] hover:text-[#212529] px-2 py-1 focus:outline-none"
+        type="button"
+      >
+        <img
+          alt="Potilaan viestit"
+          class="w-10 h-10 rounded"
+          src="../../../assets/icons/patient-messages-2.png"
+        />
+        Potilaan viestit
+        <span
+          class="absolute top-0 right-8 transform translate-x-1/2 -translate-y-1/2 bg-[#0d6efd] text-white text-[10px] font-semibold rounded-full w-5 h-5 flex items-center justify-center"
+        >
+          3
+        </span>
+      </button>
+
+      <!-- Button 3 -->
+      <button
+        aria-label="Lääkärin viestit"
+        class="flex flex-col items-center gap-1 text-xs text-[#495057] hover:text-[#212529] focus:outline-none"
+        type="button"
+      >
+        <img
+          alt="Lääkärin viestit"
+          class="w-10 h-10 rounded"
+          src="../../../assets/icons/doctor-messages.png"
+        />
+        Lääkärin viestit
+      </button>
+
+      <!-- Button 4 -->
+      <button
+        aria-label="Työajat"
+        class="flex flex-col items-center gap-1 text-xs text-[#495057] hover:text-[#212529] focus:outline-none"
+        type="button"
+      >
+        <img
+          alt="Työajat"
+          class="w-10 h-10 rounded"
+          src="../../../assets/icons/working-hours.png"
+        />
+        Työajat
+      </button>
+
+      <!-- Button 5 -->
+      <button
+        aria-label="Kalenteri"
+        class="flex flex-col items-center gap-1 text-xs text-[#495057] hover:text-[#212529] focus:outline-none"
+        type="button"
+      >
+        <img
+          alt="Kalenteri"
+          class="w-10 h-10 rounded"
+          src="../../../assets/icons/calender.png"
+        />
+        Kalenteri
+      </button>
+
+      <!-- Button 6 -->
+      <button
+        aria-label="Asetukset"
+        class="flex flex-col items-center gap-1 text-xs text-[#495057] hover:text-[#212529] focus:outline-none"
+        type="button"
+      >
+        <img
+          alt="Asetukset"
+          class="w-10 h-10 rounded"
+          src="../../../assets/icons/settings.png"
+        />
+        Asetukset
+      </button>
+
+      <!-- Button 7 -->
+      <button
+        aria-label="Terveysportti"
+        class="flex flex-col items-center gap-1 text-xs text-[#495057] hover:text-[#212529] focus:outline-none"
+        type="button"
+      >
+        <img
+          alt="Terveysportti"
+          class="w-10 h-10 rounded"
+          src="../../../assets/icons/health-portal.png"
+        />
+        Terveysportti
+      </button>
+    </nav>
+  </div>
+</div>
+
+<main class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 max-w-7xl">
+  <div class="flex flex-col lg:flex-row gap-6">
+    <!-- Left Column -->
+    <section class="lg:w-2/3 w-full">
+      <article
+        aria-label="Työlista"
+        class="bg-white rounded-lg shadow p-4 sm:p-6 flex flex-col gap-4"
+      >
+        <header class="flex flex-col sm:flex-row sm:items-center gap-2">
+          <h2 class="text-xl font-semibold text-gray-900">Työlista</h2>
+          <a
+            class="inline-flex items-center gap-1 rounded bg-blue-400 px-2 py-1 text-white text-sm font-semibold hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-600"
+            href="#"
+          >
+            <i class="fas fa-calendar"> </i>
+            Kalenteri
+          </a>
+        </header>
+        <div
+          aria-label="Navigointi työlistassa"
+          class="flex justify-between text-blue-600 text-sm font-semibold"
+          role="group"
+        >
+          <button
+            aria-label="Siirry eiliseen listaan"
+            class="flex items-center gap-1 text-[#212529] focus:outline-none"
+            type="button"
+          >
+            <i class="fas fa-chevron-left"> </i>
+            Eilinen lista
+          </button>
+          <button
+            aria-label="Siirry huomiseen listaan"
+            class="flex items-center gap-1 text-[#212529] focus:outline-none"
+            type="button"
+          >
+            Huomisen lista
+            <i class="fas fa-chevron-right"> </i>
+          </button>
+        </div>
+        <ul
+          class="divide-y divide-gray-300 text-xs text-gray-900 max-w-full"
+          role="list"
+        >
+          <li class="py-2" role="listitem">
+            <div
+              aria-controls="desc-1"
+              aria-expanded="true"
+              class="flex flex-wrap items-center gap-2"
+              id="desc-1"
+            >
+              <button
+                aria-label="Laajenna/tiivistä kuvaus"
+                class="text-blue-600 font-semibold flex items-center justify-center w-5 h-5 border border-blue-600 rounded-full focus:outline-none"
+                type="button"
+              >
+                <i class="fas fa-minus"> </i>
+              </button>
+              <span class="w-[130px] font-semibold"> 09:00 AM </span>
+              <span class="flex-1 min-w-[180px] truncate">
+                Juha Lahtinen – 240545-123Y
+              </span>
+              <span class="min-w-[110px] font-semibold"> Etävastaanotto </span>
+              <button
+                class="bg-blue-900 text-white text-[11px] rounded px-2 py-0.5 font-semibold hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-700"
+                type="button"
+              >
+                Avaa etävastaanotto
+              </button>
+              <button
+                class="bg-blue-700 text-white text-[11px] rounded px-2 py-0.5 font-semibold hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                type="button"
+              >
+                Avaa potilas
+              </button>
+              <button
+                class="bg-blue-400 text-white text-[11px] rounded px-2 py-0.5 font-semibold hover:bg-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                type="button"
+              >
+                Viestit
+              </button>
+            </div>
+            <div
+              class="mt-2 text-[11px] text-gray-600 border border-gray-300 rounded p-2 bg-gray-100"
+            >
+              Hei tohtori, kiitos, että hyväksyitte tapaamisen. Tarvitsen apua
+              uusien oireideni kanssa, joita aloin kokea viime viikolla.
+            </div>
+          </li>
+          <li class="py-2" role="listitem">
+            <div
+              aria-controls="desc-2"
+              aria-expanded="false"
+              class="flex flex-wrap items-center gap-2"
+            >
+              <button
+                aria-controls="desc-2"
+                aria-expanded="false"
+                aria-label="Laajenna/tiivistä kuvaus"
+                class="text-blue-600 font-semibold flex items-center justify-center w-5 h-5 border border-blue-600 rounded-full focus:outline-none"
+                onclick="toggleAccordion(this)"
+                type="button"
+              >
+                <i class="fas fa-plus"> </i>
+              </button>
+              <span class="w-[130px] font-semibold"> 09:45 AM </span>
+              <span class="flex-1 min-w-[180px] truncate">
+                Kaarina Mäkinen – 210637-963A
+              </span>
+              <span class="min-w-[110px] font-semibold"> Etävastaanotto </span>
+              <button
+                class="bg-blue-900 text-white text-[11px] rounded px-2 py-0.5 font-semibold hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-700"
+                type="button"
+              >
+                Avaa etävastaanotto
+              </button>
+              <button
+                class="bg-blue-700 text-white text-[11px] rounded px-2 py-0.5 font-semibold hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                type="button"
+              >
+                Avaa potilas
+              </button>
+              <button
+                class="bg-blue-400 text-white text-[11px] rounded px-2 py-0.5 font-semibold hover:bg-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                type="button"
+              >
+                Viestit
+              </button>
+            </div>
+          </li>
+          <li class="py-2" role="listitem">
+            <div
+              aria-controls="desc-3"
+              aria-expanded="false"
+              class="flex flex-wrap items-center gap-2"
+            >
+              <button
+                aria-controls="desc-3"
+                aria-expanded="false"
+                aria-label="Laajenna/tiivistä kuvaus"
+                class="text-blue-600 font-semibold flex items-center justify-center w-5 h-5 border border-blue-600 rounded-full focus:outline-none"
+                onclick="toggleAccordion(this)"
+                type="button"
+              >
+                <i class="fas fa-plus"> </i>
+              </button>
+              <span class="w-[130px] font-semibold"> 10:30 AM </span>
+              <span class="flex-1 min-w-[180px] truncate">
+                Antti Virtanen – 060526-741B
+              </span>
+              <span class="min-w-[110px] font-semibold"> Vastaanotto </span>
+              <button
+                class="bg-blue-900 text-white text-[11px] rounded px-2 py-0.5 font-semibold hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-700"
+                type="button"
+              >
+                Aloita vastaanotto
+              </button>
+              <button
+                class="bg-blue-700 text-white text-[11px] rounded px-2 py-0.5 font-semibold hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                type="button"
+              >
+                Avaa potilas
+              </button>
+              <button
+                class="bg-blue-400 text-white text-[11px] rounded px-2 py-0.5 font-semibold hover:bg-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                type="button"
+              >
+                Viestit
+              </button>
+            </div>
+          </li>
+          <li class="py-2" role="listitem">
+            <div
+              aria-controls="desc-4"
+              aria-expanded="false"
+              class="flex flex-wrap items-center gap-2"
+            >
+              <button
+                aria-controls="desc-4"
+                aria-expanded="false"
+                aria-label="Laajenna/tiivistä kuvaus"
+                class="text-blue-600 font-semibold flex items-center justify-center w-5 h-5 border border-blue-600 rounded-full focus:outline-none"
+                onclick="toggleAccordion(this)"
+                type="button"
+              >
+                <i class="fas fa-plus"> </i>
+              </button>
+              <span class="w-[130px] font-semibold"> 11:15 AM </span>
+              <span class="flex-1 min-w-[180px] truncate">
+                Mari Hiltunen – 060526-741B
+              </span>
+              <span class="min-w-[110px] font-semibold"> Hoitopuhelu </span>
+              <button
+                class="bg-blue-900 text-white text-[11px] rounded px-2 py-0.5 font-semibold hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-700"
+                type="button"
+              >
+                Avaa etävastaanotto
+              </button>
+              <button
+                class="bg-blue-700 text-white text-[11px] rounded px-2 py-0.5 font-semibold hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                type="button"
+              >
+                Avaa potilas
+              </button>
+              <button
+                class="bg-blue-400 text-white text-[11px] rounded px-2 py-0.5 font-semibold hover:bg-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                type="button"
+              >
+                Viestit
+              </button>
+            </div>
+          </li>
+          <li class="py-2" role="listitem">
+            <div
+              aria-controls="desc-5"
+              aria-expanded="false"
+              class="flex flex-wrap items-center gap-2"
+            >
+              <button
+                aria-controls="desc-5"
+                aria-expanded="false"
+                aria-label="Laajenna/tiivistä kuvaus"
+                class="text-blue-600 font-semibold flex items-center justify-center w-5 h-5 border border-blue-600 rounded-full focus:outline-none"
+                onclick="toggleAccordion(this)"
+                type="button"
+              >
+                <i class="fas fa-plus"> </i>
+              </button>
+              <span class="w-[130px] font-semibold"> 01:00 PM </span>
+              <span class="flex-1 min-w-[180px] truncate">
+                Petri Niemi – 060526-741B
+              </span>
+              <span class="min-w-[110px] font-semibold"> Konsultaatio </span>
+              <button
+                class="bg-blue-900 text-white text-[11px] rounded px-2 py-0.5 font-semibold hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-700"
+                type="button"
+              >
+                Aloita vastaanotto
+              </button>
+              <button
+                class="bg-blue-700 text-white text-[11px] rounded px-2 py-0.5 font-semibold hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                type="button"
+              >
+                Avaa potilas
+              </button>
+              <button
+                class="bg-blue-400 text-white text-[11px] rounded px-2 py-0.5 font-semibold hover:bg-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                type="button"
+              >
+                Viestit
+              </button>
+            </div>
+          </li>
+          <li class="py-2" role="listitem">
+            <div
+              aria-controls="desc-6"
+              aria-expanded="false"
+              class="flex flex-wrap items-center gap-2"
+            >
+              <button
+                aria-controls="desc-6"
+                aria-expanded="false"
+                aria-label="Laajenna/tiivistä kuvaus"
+                class="text-blue-600 font-semibold flex items-center justify-center w-5 h-5 border border-blue-600 rounded-full focus:outline-none"
+                onclick="toggleAccordion(this)"
+                type="button"
+              >
+                <i class="fas fa-plus"> </i>
+              </button>
+              <span class="w-[130px] font-semibold"> 02:15 PM </span>
+              <span class="flex-1 min-w-[180px] truncate">
+                Laura Leppänen – 151139-258D
+              </span>
+              <span class="min-w-[110px] font-semibold"> Etävastaanotto </span>
+              <button
+                class="bg-blue-900 text-white text-[11px] rounded px-2 py-0.5 font-semibold hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-700"
+                type="button"
+              >
+                Avaa etävastaanotto
+              </button>
+              <button
+                class="bg-blue-700 text-white text-[11px] rounded px-2 py-0.5 font-semibold hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                type="button"
+              >
+                Avaa potilas
+              </button>
+              <button
+                class="bg-blue-400 text-white text-[11px] rounded px-2 py-0.5 font-semibold hover:bg-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                type="button"
+              >
+                Viestit
+              </button>
+            </div>
+          </li>
+        </ul>
+
+        <div class="divide-y divide-slate-200">
+          <!-- Accordion item -->
+          <div class="py-2">
+            <h2>
+              <button
+                id="faqs-title-01"
+                type="button"
+                class="flex items-center justify-between w-full text-left font-semibold py-2"
+              >
+                <span>What are the advantages of your service?</span>
+                <svg
+                  class="fill-indigo-500 shrink-0 ml-8"
+                  width="16"
+                  height="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    y="7"
+                    width="16"
+                    height="2"
+                    rx="1"
+                    class="transform origin-center transition duration-200 ease-out"
+                  />
+                  <rect
+                    y="7"
+                    width="16"
+                    height="2"
+                    rx="1"
+                    class="transform origin-center rotate-90 transition duration-200 ease-out"
+                  />
+                </svg>
+              </button>
+            </h2>
+            <div
+              id="faqs-text-01"
+              role="region"
+              class="grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out"
+            >
+              <p class="pb-3">
+                If you go over your organisations or user limit, a member of the
+                team will reach out about bespoke pricing. In the meantime, our
+                collaborative features won't appear in accounts or users that
+                are over the 100-account or 1,000-user limit.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-wrap sm:flex-nowrap justify-between items-center mt-6 gap-3"
+        >
+          <h3 class="text-lg font-semibold text-gray-900">Muistiinpanot</h3>
+          <div class="flex gap-3 text-gray-500">
+            <button
+              aria-label="Lataa muistiinpanot"
+              class="hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-700 rounded"
+              type="button"
+            >
+              <i class="fas fa-download text-lg"> </i>
+            </button>
+            <button
+              aria-label="Tulosta muistiinpanot"
+              class="hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-700 rounded"
+              type="button"
+            >
+              <i class="fas fa-trash text-lg"> </i>
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-wrap sm:flex-nowrap items-center gap-3 mt-2">
+          <button
+            aria-label="Lisää muistiinpano"
+            class="w-12 h-12 rounded bg-gray-300 flex items-center justify-center text-gray-700 text-3xl font-light hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500"
+            type="button"
+          >
+            <i class="fas fa-plus"> </i>
+          </button>
+          <button
+            aria-label="Lukitse muistiinpanot"
+            class="w-full sm:w-auto rounded border border-gray-300 text-[8px] text-gray-500 flex items-center justify-center px-2 py-1 whitespace-nowrap hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-400"
+            type="button"
+          >
+            Lukitse muistiinpanot
+          </button>
+        </div>
+      </article>
+    </section>
+    <!-- Right Column -->
+    <aside class="lg:w-1/3 w-full flex flex-col gap-6">
+      <section
+        aria-label="Pikavalinnat"
+        class="bg-white rounded-lg shadow p-4 sm:p-6"
+      >
+        <div class="grid grid-cols-4 gap-4">
+          <button
+            aria-label="Sairaalalähete"
+            class="flex flex-col items-center gap-1 text-[11px] text-gray-600 hover:text-gray-900 focus:outline-none"
+            type="button"
+          >
+            <img
+              alt="Sairaalalähete kuvake, harmaa neliö jossa valkoinen kansio"
+              class="w-10 h-10 rounded"
+              height="40"
+              loading="lazy"
+              src="../../../assets/icons/1.jpg"
+              width="40"
+            />
+            Sairaalalähete
+          </button>
+          <button
+            aria-label="Laboratoriotilaus"
+            class="flex flex-col items-center gap-1 text-[11px] text-gray-600 hover:text-gray-900 focus:outline-none"
+            type="button"
+          >
+            <img
+              alt="Laboratoriotilaus kuvake, harmaa neliö jossa valkoinen laboratorioväline"
+              class="w-10 h-10 rounded"
+              height="40"
+              loading="lazy"
+              src="../../../assets/icons/2.jpg"
+              width="40"
+            />
+            Laboratoriotilaus
+          </button>
+          <button
+            aria-label="Todistukset"
+            class="flex flex-col items-center gap-1 text-[11px] text-gray-600 hover:text-gray-900 focus:outline-none"
+            type="button"
+          >
+            <img
+              alt="Todistukset kuvake, harmaa neliö jossa valkoinen paperi"
+              class="w-10 h-10 rounded"
+              height="40"
+              loading="lazy"
+              src="../../../assets/icons/3.jpg"
+              width="40"
+            />
+            Todistukset
+          </button>
+          <button
+            aria-label="Resepti"
+            class="flex flex-col items-center gap-1 text-[11px] text-gray-600 hover:text-gray-900 focus:outline-none"
+            type="button"
+          >
+            <img
+              alt="Resepti kuvake, harmaa neliö jossa valkoinen paperi"
+              class="w-10 h-10 rounded"
+              height="40"
+              loading="lazy"
+              src="../../../assets/icons/3.jpg"
+              width="40"
+            />
+            Resepti
+          </button>
+        </div>
+        <div class="grid grid-cols-4 gap-4 mt-4">
+          <button
+            aria-label="Kuvantaminen"
+            class="flex flex-col items-center gap-1 text-[11px] text-gray-600 hover:text-gray-900 focus:outline-none"
+            type="button"
+          >
+            <img
+              alt="Kuvantaminen kuvake, harmaa neliö jossa valkoinen röntgenkuva"
+              class="w-10 h-10 rounded"
+              height="40"
+              loading="lazy"
+              src="../../../assets/icons/4.jpg"
+              width="40"
+            />
+            Kuvantaminen
+          </button>
+          <button
+            aria-label="Lääkelista"
+            class="flex flex-col items-center gap-1 text-[11px] text-gray-600 hover:text-gray-900 focus:outline-none"
+            type="button"
+          >
+            <img
+              alt="Lääkelista kuvake, harmaa neliö jossa valkoinen paperi"
+              class="w-10 h-10 rounded"
+              height="40"
+              loading="lazy"
+              src="../../../assets/icons/5.jpg"
+              width="40"
+            />
+            Lääkelista
+          </button>
+          <button
+            aria-label="Lisää"
+            class="flex flex-col items-center gap-1 text-[11px] text-gray-600 hover:text-gray-900 focus:outline-none"
+            type="button"
+          >
+            <img
+              alt="Lisää kuvake, harmaa neliö jossa valkoinen plusmerkki"
+              class="w-10 h-10 rounded"
+              height="40"
+              loading="lazy"
+              src="../../../assets/icons/Screenshot 2025-06-05 173400.png"
+              width="40"
+            />
+          </button>
+          <div></div>
+        </div>
+      </section>
+      <section
+        aria-label="Viimeisimmät potilaat"
+        class="bg-white rounded-lg shadow p-4 sm:p-6"
+      >
+        <h3 class="font-semibold text-sm mb-2">Viimeisimmät potilaat</h3>
+        <form aria-label="Etsi potilas" class="mb-3 relative" role="search">
+          <input
+            aria-label="Etsi potilaan nimi tai henkilötunnus"
+            class="w-full border border-gray-300 rounded px-3 py-1.5 text-xs text-gray-600 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-600"
+            placeholder="Etsi potilaan nimi tai henkilötunnus..."
+            type="search"
+          />
+          <button
+            aria-label="Hae potilas"
+            class="absolute right-2 top-1/2 -translate-y-1/2 text-gray-600 hover:text-gray-900 focus:outline-none"
+            type="submit"
+          >
+            <i class="fas fa-search"> </i>
+          </button>
+        </form>
+        <ul
+          aria-label="Potilaslista"
+          class="text-xs text-gray-900 divide-y divide-gray-300"
+          role="list"
+        >
+          <li
+            class="py-1 flex justify-between items-center cursor-pointer hover:bg-gray-100"
+            role="listitem"
+          >
+            <button
+              aria-controls="patient1"
+              aria-expanded="false"
+              class="flex items-center gap-2 w-full text-left focus:outline-none"
+              type="button"
+            >
+              <i class="fas fa-chevron-right text-gray-500"> </i>
+              Olavi Virtanen – 240545-123Y
+            </button>
+          </li>
+          <li
+            class="py-1 flex justify-between items-center cursor-pointer hover:bg-gray-100"
+            role="listitem"
+          >
+            <button
+              aria-controls="patient2"
+              aria-expanded="false"
+              class="flex items-center gap-2 w-full text-left focus:outline-none"
+              type="button"
+            >
+              <i class="fas fa-chevron-right text-gray-500"> </i>
+              Juhani Korhonen – 010132-123Y
+            </button>
+          </li>
+          <li
+            class="py-1 flex justify-between items-center cursor-pointer hover:bg-gray-100"
+            role="listitem"
+          >
+            <button
+              aria-controls="patient3"
+              aria-expanded="false"
+              class="flex items-center gap-2 w-full text-left focus:outline-none"
+              type="button"
+            >
+              <i class="fas fa-chevron-right text-gray-500"> </i>
+              Riikka Mäkelä – 150242-456K
+            </button>
+          </li>
+          <li
+            class="py-1 flex justify-between items-center cursor-pointer hover:bg-gray-100"
+            role="listitem"
+          >
+            <button
+              aria-controls="patient4"
+              aria-expanded="false"
+              class="flex items-center gap-2 w-full text-left focus:outline-none"
+              type="button"
+            >
+              <i class="fas fa-chevron-right text-gray-500"> </i>
+              Mikko Nieminen – 300630-789P
+            </button>
+          </li>
+          <li
+            class="py-1 flex justify-between items-center cursor-pointer hover:bg-gray-100"
+            role="listitem"
+          >
+            <button
+              aria-controls="patient5"
+              aria-expanded="false"
+              class="flex items-center gap-2 w-full text-left focus:outline-none"
+              type="button"
+            >
+              <i class="fas fa-chevron-right text-gray-500"> </i>
+              Aino Salminen – 010141-321N
+            </button>
+          </li>
+          <li
+            class="py-1 flex justify-between items-center cursor-pointer hover:bg-gray-100"
+            role="listitem"
+          >
+            <button
+              aria-controls="patient6"
+              aria-expanded="false"
+              class="flex items-center gap-2 w-full text-left focus:outline-none"
+              type="button"
+            >
+              <i class="fas fa-chevron-right text-gray-500"> </i>
+              Sari Lahtinen – 150242-456K
+            </button>
+          </li>
+        </ul>
+      </section>
+    </aside>
+  </div>
+</main>

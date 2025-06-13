@@ -1,0 +1,82 @@
+<div class="app-header d-flex justify-content-between col">
+  <div class="nav-link gap-3 align-items-center">
+    <a routerLink="/" class="rounded bg-info p-1"> Dashboard </a>
+    <a routerLink="/visit-form" class="rounded bg-info p-1"> Visit </a>
+  </div>
+  <div class="d-flex justify-content-center align-items-center col">
+    <div class="search">
+      <div class="search-box">
+        <div class="search-field">
+          <input placeholder="Hae avainsanoja..." class="input" type="text" />
+          <div class="search-box-icon">
+            <button class="btn-icon-content">
+              <i class="search-icon">
+                <svg
+                  xmlns="://www.w3.org/2000/svg"
+                  version="1.1"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+                    fill="#808080"
+                  ></path>
+                </svg>
+              </i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-end align-items-center space-x-2">
+    <button
+      aria-label="Notifications"
+      class="text-gray-400 hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-full p-1"
+    >
+      <i class="far fa-bell fa-lg"></i>
+    </button>
+    <button
+      mat-icon-button
+      id="dropdownAvatarNameButton"
+      data-dropdown-toggle="dropdownAvatarName"
+    >
+      <mat-icon>account_circle</mat-icon>
+    </button>
+
+    <!-- Dropdown menu -->
+    <div
+      id="dropdownAvatarName"
+      class="logout-menu z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600"
+    >
+      <div class="px-4 py-3 text-sm text-gray-900 dark:text-dark">
+        <h5 class="h5">Kerola Tuomas Veikko</h5>
+        <div class="truncate">
+          <p>Erikoissairaanhoito</p>
+          <p>Paljatha, esh, P0007</p>
+        </div>
+      </div>
+      <div class="py-2">
+        <a
+          href="#"
+          class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+          ><i class="fa-solid fa-gear fa-xl"></i> Asetukset</a
+        >
+      </div>
+      <div class="py-2">
+        <a
+          href="#"
+          class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+          ><i class="fa-solid fa-user-gear fa-xl"></i> Avaa ylläpitäjän
+          Paneeli</a
+        >
+      </div>
+      <div class="py-2">
+        <a
+          href="#"
+          class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+          ><i class="fa-solid fa-right-from-bracket fa-xl"></i> Kirjaudu ulos</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

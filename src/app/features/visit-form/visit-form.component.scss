@@ -1,0 +1,51 @@
+   /* Custom scrollbar for input fields with icons on right */
+   .input-icon-right {
+    position: relative;
+  }
+   .input-icon-left-search {
+    position: relative;
+  }
+   .input-icon-right-textarea {
+    position: relative;
+  }
+  .input-icon-right input {
+    padding-right: 2.5rem;
+  }
+  .input-icon-left-search input {
+    padding-right: 2.5rem;
+  }
+  .input-icon-right-textarea input {
+    padding-right: 2.5rem;
+  }
+  .input-icon-right .icon {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af; /* Tailwind gray-400 */
+    pointer-events: none;
+  }
+  .input-icon-left-search .icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af; /* Tailwind gray-400 */
+    pointer-events: none;
+  }
+  .input-icon-left-search .icon-mic {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af; /* Tailwind gray-400 */
+    pointer-events: none;
+  }
+  .input-icon-right-textarea .icon{
+    position: absolute;
+    right: 0.55rem;
+    top: 25%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+    pointer-events: none;
+  }
